@@ -8,6 +8,8 @@
 
 #import "AddSightingViewController.h"
 
+#import "BirdSighting.h"
+
 @interface AddSightingViewController ()
 
 @end
@@ -21,6 +23,17 @@
         // Custom initialization
     }
     return self;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"ReturnInput"]) {
+        if ([self.birdNameInput.text length] || [self.locationInput.text length]) {
+            BirdSighting *sighting;
+            NSDate *today = [NSDate date];
+            sighting = [[BirdSighting alloc] initWithName:self.birdNameInput.text location:self.locationInput.text date:today];
+            self.birdSighting = sighting;
+        }
+    }
 }
 
 - (void)viewDidLoad
@@ -38,6 +51,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if ((textField == self.birdNameInput) || (textField == self.locationInput)) {
+        [textField resignFirstResponder];
+    }
+    return YES;
 }
 
 #pragma mark - Table view data source
@@ -110,12 +130,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    /*
+    
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
      // ...
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
-}
-*/
+
 @end

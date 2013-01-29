@@ -14,6 +14,9 @@
 
 #import "BirdSighting.h"
 
+#import "AddSightingViewController.h"
+
+
 /*@interface BirdsMasterViewController () {
     NSMutableArray *_objects;
 }
@@ -36,6 +39,26 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;*/
+}
+
+- (IBAction)done:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"ReturnInput"]) {
+        
+        AddSightingViewController *addController = [segue sourceViewController];
+        if (addController.birdSighting) {
+            [self.dataController addBirdSightingWithSighting:addController.birdSighting];
+            [[self tableView] reloadData];
+        }
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+}
+
+- (IBAction)cancel:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"CancelInput"]) {
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
 }
 
 - (void)didReceiveMemoryWarning
