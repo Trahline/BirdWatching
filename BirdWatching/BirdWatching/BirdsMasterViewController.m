@@ -34,6 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem.accessibilityHint = @"Adds a new bird-sighting event";
 	// Do any additional setup after loading the view, typically from a nib.
    /* self.navigationItem.leftBarButtonItem = self.editButtonItem;
 

@@ -22,6 +22,7 @@
 		712B793616AF00180019B1F1 /* BirdsMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 712B793516AF00180019B1F1 /* BirdsMasterViewController.m */; };
 		712B793916AF00180019B1F1 /* BirdsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 712B793816AF00180019B1F1 /* BirdsDetailViewController.m */; };
 		712B794116AF0CDD0019B1F1 /* BirdSighting.m in Sources */ = {isa = PBXBuildFile; fileRef = 712B794016AF0CDD0019B1F1 /* BirdSighting.m */; };
+		71DD992116B781250076E3BE /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = 71DD992016B781250076E3BE /* ReadMe */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		712B793816AF00180019B1F1 /* BirdsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirdsDetailViewController.m; sourceTree = "<group>"; };
 		712B793F16AF0CDD0019B1F1 /* BirdSighting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdSighting.h; sourceTree = "<group>"; };
 		712B794016AF0CDD0019B1F1 /* BirdSighting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdSighting.m; sourceTree = "<group>"; };
+		71DD992016B781250076E3BE /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ReadMe; path = ../ReadMe; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				712B792916AF00180019B1F1 /* BirdsAppDelegate.m */,
 				712B793116AF00180019B1F1 /* MainStoryboard.storyboard */,
 				712B793416AF00180019B1F1 /* BirdsMasterViewController.h */,
+				71DD992016B781250076E3BE /* ReadMe */,
 				712B793516AF00180019B1F1 /* BirdsMasterViewController.m */,
 				712B793F16AF0CDD0019B1F1 /* BirdSighting.h */,
 				712B794016AF0CDD0019B1F1 /* BirdSighting.m */,
@@ -184,6 +187,7 @@
 				712B792E16AF00180019B1F1 /* Default@2x.png in Resources */,
 				712B793016AF00180019B1F1 /* Default-568h@2x.png in Resources */,
 				712B793316AF00180019B1F1 /* MainStoryboard.storyboard in Resources */,
+				71DD992116B781250076E3BE /* ReadMe in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
